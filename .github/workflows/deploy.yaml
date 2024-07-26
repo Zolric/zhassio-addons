@@ -14,8 +14,8 @@ on:
 
 jobs:
   workflows:
-    uses: hassio-addons/workflows/.github/workflows/addon-deploy.yaml@main
+    uses: zhassio-addons/workflows/.github/workflows/addon-deploy.yaml@main
     with:
-      slug: "node-red"
+      slug: "zhomenextcloud"
     secrets:
       DISPATCH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
