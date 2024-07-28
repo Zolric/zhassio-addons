@@ -70,6 +70,5 @@
 	"full_access": true,
 	"hassio_role": "admin",
 	"privileged": ["SYS_ADMIN","DAC_READ_SEARCH"],
-	"image": "myhub/image-{arch}-addon-name",
 	"url": "https://github.com/zolric/zhassio-addons",
 }
