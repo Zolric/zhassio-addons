@@ -1,7 +1,7 @@
 {
-    "name": "Zhome NextCloud",
+    "name": "NextCloud",
     "version": "29.0.4",
-    "slug": "zhomenextcloud",
+    "slug": "nextcloud",
     "description": "Self-hosted file share and collaboration platform on the web",
     "webui": "http://[HOST]:[PORT:80]",
     "panel_icon": "mdi:cloud-sync",
