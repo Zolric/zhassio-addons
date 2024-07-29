@@ -1,7 +1,7 @@
 {
-    "name": "NextCloud",
+    "name": "Zhome NextCloud",
     "version": "29.0.4",
-    "slug": "nextcloud",
+    "slug": "zhomenextcloud",
     "description": "Self-hosted file share and collaboration platform on the web",
     "webui": "http://[HOST]:[PORT:80]",
     "panel_icon": "mdi:cloud-sync",
@@ -70,5 +70,5 @@
 	"full_access": true,
 	"hassio_role": "admin",
 	"privileged": ["SYS_ADMIN","DAC_READ_SEARCH"],
-	"url": "https://github.com/zolric/zhassio-addons",
+	"url": "https://github.com/zolric/zhassio-addons"
 }
