@@ -1,0 +1,10 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+# Home Assistant Community Add-on: Jellyfin
+# Starts Jellyfin
+# ==============================================================================
+
+bashio::log.info "Starting Jellyfin..."
+
+exec jellyfin 

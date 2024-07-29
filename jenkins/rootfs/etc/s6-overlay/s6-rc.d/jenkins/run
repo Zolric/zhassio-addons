@@ -1,0 +1,22 @@
+#!/usr/bin/env bashio
+# ==============================================================================
+# Home Assistant Community Add-on: Jenkins
+# Runs Jenkins
+# ==============================================================================
+declare -a options
+bashio::log.info 'Init Jenkins...'
+export JENKINS_HOME="/config/jenkins"
+export HOME="/root"
+#export JENKINS_PREFIX="/api/hassio_ingress/GJKD0o1BEMTeFGXYish3puDFC33mozJp_ySO6UJpNYk"
+#export JENKINS_PREFIX="/hassio/ingress/local_zhomejenkins"
+#export PATH=/root/.arduino15/packages/esp8266/tools:${PATH}
+chmod 755 -R /root/.arduino15/packages/esp8266/tools
+arduino-cli version
+#arduino-cli core update-index 
+#arduino-cli core install esp8266:esp8266 
+
+bashio::log.info 'Starting Jenkins...'
+
+# Run Jenkins
+exec jenkins
+#/usr/local/bin/jenkins.sh
