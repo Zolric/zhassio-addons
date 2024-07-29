@@ -27,7 +27,7 @@ _video player and streaming server_
 ![Supports i386 Architecture][i386-shield]
 
 ### [Jenkins add-on](./jenkins)
-_ Automate all sorts of tasks related to building, testing, and delivering or deploying software._
+_Automate all sorts of tasks related to building, testing, and delivering or deploying software._
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
 ![Supports armhf Architecture][armhf-shield]
