@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: Syncthing
+# ==============================================================================
+bashio::log.info "Starting Syncthing..."
+
+exec syncthing --config=/config/syncthing/ --data=/config/syncthing/

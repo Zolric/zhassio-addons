@@ -1,6 +1,6 @@
-# Jellyfin add-on for Home Assistant
+# Syncthing add-on for Home Assistant
 
-video player and streaming server
+Backup some folder to another Syncthing instance.
 
 ## Configuration
 

@@ -37,10 +37,9 @@ SMTP_SECURE: ssl
 SMTP_NAME: zolric@gmail.com
 SMTP_PASSWORD: 
 MAIL_FROM_ADDRESS: zolric@gmail.com						# 
-disk_s: DATA=ext4										# sources des fichiers à ajouter = type = local/ntfs/ntfs-3g/ext4 - ie: local=racine du conteneur sinon montage USB 
-type_s: 												# type de fichier [local/NTFS/NTFS-3G/EXT4 - ie: local=racine du conteneur sinon montage USB 
-source: [/data/photos|photos]								# repertoires à ajouter au compte de l'admin = avec nom du lien
-option: null/force                                      # Force le scan des fichiers de l'admin
+disk_s: DATA=ext4										# sources des fichiers à ajouter=type = local/ntfs/ntfs-3g/ext4 - ie: local=racine du conteneur sinon montage USB 
+source: [/data/photos=photos]							# repertoires à ajouter au compte de l'admin = avec nom du lien
+option: null/force                                      # Force le scan des fichiers 
 DATA_users: /share  									# repertoire des utilisateurs : /share/nextcloud/www/html/data
 ```
 This list is not exhaustive. The documentation for env variables can be found at https://github.com/docker-library/docs/blob/master/nextcloud/README.md#auto-configuration-via-environment-variables.

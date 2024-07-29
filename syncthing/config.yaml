@@ -1,0 +1,34 @@
+---
+name: Zhome Syncthing
+version: 3.0
+slug: zhomesynch
+description: Outil de synchronisation
+ingress: true
+ingress_stream: true
+panel_icon: mdi:download-network
+init: false
+hassio_api: true
+homeassistant_api: true
+arch:
+  - aarch64
+  - amd64
+  - armv7
+privileged: 
+  - SYS_ADMIN
+  - DAC_READ_SEARCH
+  - NET_ADMIN
+full_access: true
+hassio_role: admin
+map:
+  - backup:rw
+  - config:rw
+  - media:rw
+  - share:rw
+  - ssl:rw
+options:
+  disk_s: DATA
+  type_s: null
+schema:
+  disk_s: str
+  type_s: list(ntfs|ntfs-3g|ext4)?
+startup: services
