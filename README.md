@@ -1,4 +1,4 @@
-# Example Home Assistant add-on repository
+# Zolric Home Assistant add-on repository
 
 This repository contains all add-on developed by Zolric.
 
