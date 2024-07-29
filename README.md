@@ -17,6 +17,7 @@ This repository contains the following add-ons
 ![Supports armhf Architecture][armhf-shield]
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
+_Nextcloud add-on to Self-hosted file share and collaboration platform on the web._
 
 ### [Jellyfin add-on](./jellyfin)
 
@@ -34,7 +35,7 @@ This repository contains the following add-ons
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
-_Nextcloud add-on to Self-hosted file share and collaboration platform on the web._
+
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
