@@ -1,10 +1,9 @@
 ---
 name: Zhome Jenkins
-version: 2.0
+version: v2.0
 slug: zhomejenkins
 description: Jenkins
 ingress: true
-ingress_port: 8099
 panel_icon: mdi:alpha-j-circle-outline
 init: false
 hassio_api: true
@@ -26,6 +25,5 @@ map:
   - share:rw
   - ssl:rw
 startup: services
-boot: auto
 backup_exclude:
   - "*/jenkins/workspace"
