@@ -11,12 +11,12 @@
       "80/tcp": 8443
     },
     "ports_description": {
-	  "80/tcp": "Web interface"
+      "80/tcp": "Web interface"
     },
     "map": [
       "share:rw",
-	  "media:rw",
-	  "config:rw"
+      "media:rw",
+      "config:rw"
     ],
     "options": {
       "MYSQL_DATABASE": "nextcloud",
@@ -27,17 +27,17 @@
       "NEXTCLOUD_ADMIN_PASSWORD": "",
       "NEXTCLOUD_TRUSTED_DOMAINS": "homeassistant.local",
       "TRUSTED_PROXIES": "127.0.0.1 172.30.33.0/24 192.168.1.1",
-	  "OVERWRITEPROTOCOL": "https",
+      "OVERWRITEPROTOCOL": "https",
       "OVERWRITECLIURL": "https://homeassistant.local",
-	  "SMTP_HOST": "smtp.gmail.com",
-	  "SMTP_SECURE": "ssl",
-	  "SMTP_NAME": "zolric@gmail.com",
-	  "SMTP_PASSWORD": "",
-	  "MAIL_FROM_ADDRESS": "zolric@gmail.com",
-	  "disk_s": ["DATA=ext4"],
-	  "source": ["/data/photos=photos"],
-	  "option": "null",
-	  "DATA_users": "/share"  
+      "SMTP_HOST": "smtp.gmail.com",
+      "SMTP_SECURE": "ssl",
+      "SMTP_NAME": "zolric@gmail.com",
+      "SMTP_PASSWORD": "",
+      "MAIL_FROM_ADDRESS": "zolric@gmail.com",
+      "disk_s": ["DATA=ext4"],
+      "source": ["/data/photos=photos"],
+      "option": "null",
+      "DATA_users": "/share"  
     },
     "schema": {
       "MYSQL_DATABASE": "str",
@@ -48,17 +48,17 @@
       "NEXTCLOUD_ADMIN_PASSWORD": "password",
       "NEXTCLOUD_TRUSTED_DOMAINS": "str",
       "TRUSTED_PROXIES": "str",
-	  "OVERWRITEPROTOCOL": "str",
-	  "OVERWRITECLIURL": "str",
-	  "SMTP_HOST": "str",
-	  "SMTP_SECURE": "str",
-	  "SMTP_NAME": "str",
-	  "SMTP_PASSWORD": "password",
-	  "MAIL_FROM_ADDRESS": "str",
-	  "disk_s": ["str"],
-	  "source": ["str"],
-	  "option": "list(force|null)?",
-	  "DATA_users": "str"
+      "OVERWRITEPROTOCOL": "str",
+      "OVERWRITECLIURL": "str",
+      "SMTP_HOST": "str",
+      "SMTP_SECURE": "str",
+      "SMTP_NAME": "str",
+      "SMTP_PASSWORD": "password",
+      "MAIL_FROM_ADDRESS": "str",
+      "disk_s": ["str"],
+      "source": ["str"],
+      "option": "list(force|null)?",
+      "DATA_users": "str"
     },
     "arch": [
       "aarch64",
@@ -67,8 +67,8 @@
       "armv7",
       "i386"
     ],
-	"full_access": true,
-	"hassio_role": "admin",
-	"privileged": ["SYS_ADMIN","DAC_READ_SEARCH"],
-	"url": "https://github.com/zolric/zhassio-addons"
+    "full_access": true,
+    "hassio_role": "admin",
+    "privileged": ["SYS_ADMIN","DAC_READ_SEARCH"],
+    "url": "https://github.com/zolric/zhassio-addons"
 }
