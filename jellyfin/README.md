@@ -7,7 +7,7 @@ video player and streaming server
 This section describes each of the add-on configuration options.
 
 ```yaml
-    disk_s: "DATA" (label of an external disk source to be duplicated")
+    disk_s: "DATA" (label of an external disk source contain viedo")
 	type_s: "" (ntfs or ntfs-3g if it is a ntfs disk)
 ```
 
