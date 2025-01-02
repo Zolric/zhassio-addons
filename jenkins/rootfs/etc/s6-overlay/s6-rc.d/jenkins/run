@@ -5,6 +5,9 @@
 # ==============================================================================
 declare -a options
 bashio::log.info 'Init Jenkins...'
+if [ ! -d /config/jenkins  ]; then
+	mkdir -p /config/jenkins 
+fi
 export JENKINS_HOME="/config/jenkins"
 #export JENKINS_PREFIX="/api/hassio_ingress/y-O6Bc15bIsvmP_fsngjHA3YNqXbtVnHfLxJ3khRSQs"
 #export JENKINS_PREFIX="/jenkins"
