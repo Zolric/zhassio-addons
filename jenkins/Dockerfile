@@ -4,7 +4,7 @@ FROM ${BUILD_FROM}
 
 USER root
 
-ENV JENKINS_HOME="/config/jenkins"
+ENV JENKINS_HOME="/config/jenkins" 
 	
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -48,11 +48,13 @@ RUN \
         /etc/nginx \
     \
     && mkdir -p /var/log/nginx \
-    && touch /var/log/nginx/error.log 
+    && touch /var/log/nginx/error.log \
+ 	&& usermod -aG jenkins www-data
 
 # Copy root filesystem
 COPY rootfs /
-RUN chmod -R 755 /etc 
+RUN chmod -R 755 /etc \
+ && chmod -R 755 /usr/share
 
 # Build arguments
 ARG BUILD_ARCH
