@@ -18,6 +18,10 @@ arch:
   - armv7
 privileged: 
   - NET_ADMIN
+ports: 
+  8080/tcp: 8080
+ports_description:
+  8080/tcp: Web interface (Not required for Ingress) HTTP traffic
 map:
   - addon_config:rw
   - homeassistant_config:rw
