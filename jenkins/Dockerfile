@@ -40,9 +40,11 @@ RUN \
        xz-utils \
     && apt-get clean \
 	&& curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR=/usr/local/bin sh \
-	&& arduino-cli config init --additional-urls https://arduino.esp8266.com/stable/package_esp8266com_index.json \
+	&& arduino-cli config init --additional-urls https://arduino.esp8266.com/stable/package_esp8266com_index.json, \
+	   https://espressif.github.io/arduino-esp32/package_esp32_index.json \
 	&& arduino-cli core update-index \
 	&& arduino-cli core install esp8266:esp8266 \
+	&& arduino-cli core install esp32:esp32 \
     \
     && rm -fr \
         /etc/nginx \
@@ -67,20 +69,18 @@ ARG BUILD_VERSION
 
 # Labels
 LABEL \
-    io.hass.name="${BUILD_NAME}" \
-    io.hass.description="${BUILD_DESCRIPTION}" \
+    io.hass.name="Jenkins" \
+    io.hass.description="Jenkins add-on by Zolric" \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Franck Nijhof <frenck@addons.community>" \
-    io.hass.name="${BUILD_NAME}" \
-    io.hass.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
-    org.opencontainers.image.authors="Franck Nijhof <frenck@addons.community>" \
-    org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://addons.community" \
-    org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
-    org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
-    org.opencontainers.image.created=${BUILD_DATE} \
-    org.opencontainers.image.revision=${BUILD_REF} \
-    org.opencontainers.image.version=${BUILD_VERSION}
+    maintainer="Zolric <zolric@gmail.com>" \
+    org.label-schema.description="Jenkins add-on by Zolric" \
+    org.label-schema.build-date=${BUILD_DATE} \
+    org.label-schema.name="Jenkins" \
+    org.label-schema.schema-version="1.0.0" \
+    org.label-schema.url="https://github.com/Zolric/zhassio-addons/jenkins" \
+    org.label-schema.usage="https://github.com/Zolric/zhassio-addons/tree/main/jenkins/README.md" \
+    org.label-schema.vcs-ref=${BUILD_REF} \
+    org.label-schema.vcs-url="https://github.com/Zolric/zhassio-addons/jenkins/" \
+    org.label-schema.vendor="Zolric Hass.io Add-ons"
