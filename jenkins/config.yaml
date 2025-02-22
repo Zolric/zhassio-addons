@@ -1,6 +1,6 @@
 ---
 name: Zhome Jenkins
-version: V7.6.2
+version: V7.6.3
 slug: zhomejenkins
 description: Jenkins
 ingress: true
