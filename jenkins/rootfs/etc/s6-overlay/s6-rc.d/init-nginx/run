@@ -16,3 +16,5 @@ tmp=`whoami`
 cat /etc/passwd 
 id "${tmp}"
 chmod -R 755 /config/jenkins 
+usermod -aG jenkins www-data
+usermod -aG jenkins nginx
