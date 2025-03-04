@@ -1,0 +1,33 @@
+#!/usr/bin/with-contenv bashio
+
+bashio::log.info "Protection Mode is $(bashio::addon.protected)"
+bashio::log.info "montage usb Disk Hass.io"
+disk_s=$(bashio::config 'disk_s')
+
+# Mount CIFS Share if configured and if Protection Mode is active
+if [ -n "${disk_s}" ]; then
+	for param_dd in $disk_s
+	do
+		dd=`echo ${param_dd} | cut -f1 -d'='`
+		ddlow=`echo ${dd} | awk '{print tolower($0)}'`
+		typdd=`echo ${param_dd} | cut -f2 -d'=' | sed 's/ *$//g' | sed 's/^ *//g'`
+		
+		if [[ $typdd = "local" ]]
+		then
+			echo "[Info]Link data en local ${datasource}"
+		else
+			echo "[Info]montage usb Disk Hass.io et démarrage NextCloud"
+			echo "[Info]Link disk ${dd} type ${typdd} "
+			mkdir /${ddlow}
+			if [ "$typdd" != "ext4" ]
+			then
+				typeopt="-t ${typdd}"
+			else 
+				typeopt=""
+			fi
+			#echo "mount ${typeopt} /dev/disk/by-label/${dd} /${ddlow}"
+			mount ${typeopt} /dev/disk/by-label/${dd} /${ddlow}
+			echo "[Info]Link disk USB OK"
+		fi
+	done
+fi

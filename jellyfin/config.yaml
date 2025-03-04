@@ -1,6 +1,6 @@
 ---
 name: Zhome Jellyfin
-version: v2.0
+version: 3.0
 slug: zjellyfin
 description: Streaming video
 ingress: true
@@ -37,14 +37,16 @@ map:
   - media:rw
   - share:rw
 options:
-  disk_s: DATA
-  type_s: null
+  disk_s: 
+    usbdataback=ext4
 schema:
-  disk_s: str
-  type_s: list(ntfs|ntfs-3g|ext4)?
+  disk_s: [str]
 startup: services
 video: true
 udev: true
+devices:
+  - /dev/dri/card0
+  - /dev/dri/renderD128
 backup_exclude:
   - "**/jellyfin/cache/**"
   - "**/jellyfin/logs/**"

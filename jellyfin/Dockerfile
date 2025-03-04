@@ -4,7 +4,8 @@ FROM ${BUILD_FROM}
 ENV JELLYFIN_DATA_DIR=/config/jellyfin \
 	JELLYFIN_CONFIG_DIR=/config/jellyfin/config \
 	JELLYFIN_LOG_DIR=/config/jellyfin/logs/jellyfin \
-	JELLYFIN_CACHE_DIR=/config/jellyfin/cache
+	JELLYFIN_WEB_DIR=/usr/share/webapps/jellyfin-web \
+	JELLYFIN_CACHE_DIR=/config/jellyfin/cache 
 	
 
 # Set shell
@@ -16,6 +17,7 @@ RUN apk update\
 		lshw \
 		nginx \
 		jellyfin \
+		ffmpeg \
 		jellyfin-web \
 		\
 	&& rm -fr \
