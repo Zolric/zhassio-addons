@@ -20,7 +20,7 @@ RUN \
     && apt-get install -y --no-install-recommends \
         nginx \
 		fontconfig \
-		openjdk-17-jre \
+		openjdk-21-jre \
 		curl \
 		wget \
 		git \
