@@ -20,7 +20,7 @@ RUN \
     && apt-get install -y --no-install-recommends \
         nginx \
 		fontconfig \
-		openjdk-19-jre \
+		openjdk-25-jre \
 		curl \
 		wget \
 		git \
