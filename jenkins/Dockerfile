@@ -17,10 +17,11 @@ RUN \
     && if [ "${BUILD_ARCH}" = "armv7" ]; then ARCH="armhf"; fi \
     \
     && apt-get update \
+	&& apt-cache search openjdk \
     && apt-get install -y --no-install-recommends \
         nginx \
 		fontconfig \
-		openjdk-25-jre \
+		openjdk-21-jre \
 		curl \
 		wget \
 		git \
