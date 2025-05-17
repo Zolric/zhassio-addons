@@ -15,5 +15,4 @@ whoami
 tmp=`whoami`
 cat /etc/passwd 
 id "${tmp}"
-chmod -R 755 /config/jenkins 
-usermod -aG jenkins www-data
+chmod -R 755 /config/jenkins
