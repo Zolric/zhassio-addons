@@ -9,13 +9,12 @@ if [ ! -d /config/jenkins  ]; then
 	mkdir -p /config/jenkins 
 fi
 export JENKINS_HOME="/config/jenkins"
-export JENKINS_PREFIX="/hassio/ingress/973b0e7c-zhomejenkins"
+#export JENKINS_PREFIX="/hassio/ingress/973b0e7c-zhomejenkins"
 #export JENKINS_PREFIX="/jenkins"
 export HOME="/root"
 #export JENKINS_PREFIX="/hassio/ingress/local_zhomejenkins"
 #export PATH=/root/.arduino15/packages/esp8266/tools:${PATH}
 chmod 755 -R /root/.arduino15/packages/esp8266/tools
-chmod 755 -R /config/jenkins/war
 readonly arduino_cli_version=`arduino-cli version`
 
 bashio::log.info "Version Arduino : ${arduino_cli_version}"
