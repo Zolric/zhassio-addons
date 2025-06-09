@@ -9,7 +9,7 @@ if [ ! -d /config/jenkins  ]; then
 	mkdir -p /config/jenkins 
 fi
 export JENKINS_HOME="/config/jenkins"
-#export JENKINS_PREFIX="/hassio/ingress/973b0e7c-zhomejenkins"
+export JENKINS_PREFIX="/hassio/ingress/973b0e7c-zhomejenkins"
 #export JENKINS_PREFIX="/jenkins"
 export HOME="/root"
 #export JENKINS_PREFIX="/hassio/ingress/local_zhomejenkins"
