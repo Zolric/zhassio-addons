@@ -1,8 +1,11 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:7.2.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.8.3
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
 USER root
+
+# Copy root filesystem
+COPY rootfs /
 
 ENV JENKINS_HOME="/config/jenkins" 
 	
@@ -53,8 +56,7 @@ RUN \
     && touch /var/log/nginx/error.log \
  	&& usermod -aG jenkins www-data
 
-# Copy root filesystem
-COPY rootfs /
+
 
 
 # Build arguments
