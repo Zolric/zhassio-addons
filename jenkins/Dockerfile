@@ -55,8 +55,6 @@ RUN \
 
 # Copy root filesystem
 COPY rootfs /
-RUN chmod -R 755 /etc \
- && chmod -R 755 /usr/share
 
 # Build arguments
 ARG BUILD_ARCH
