@@ -57,7 +57,7 @@ RUN \
 COPY rootfs /
 RUN chmod -R 755 /etc/arduino \
  && chmod -R 755 /etc/nginx \
- && chmod -R 755 /etc/s6* 
+ && chmod -R 755 /etc/s6-overlay
 
 # Build arguments
 ARG BUILD_ARCH
