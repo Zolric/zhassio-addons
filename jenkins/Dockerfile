@@ -54,9 +54,10 @@ RUN \
  	&& usermod -aG jenkins www-data
 
 # Copy root filesystem
-COPY rootfs /
-RUN chmod -R 755 /etc \
- && chmod -R 755 /usr/share
+COPY rootfs /tmp
+
+RUN chmod -R 755 /tmp \
+	&& mv /tmp /
 
 # Build arguments
 ARG BUILD_ARCH
