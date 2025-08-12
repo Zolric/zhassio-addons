@@ -57,7 +57,7 @@ RUN \
 COPY rootfs /tmp
 
 RUN chmod -R 755 /tmp \
-	&& mv /tmp /
+	&& mv /tmp/etc /.
 
 # Build arguments
 ARG BUILD_ARCH
