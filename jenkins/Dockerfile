@@ -58,7 +58,7 @@ COPY rootfs /tmp
 
 RUN ls /tmp
 
-RUN chmod -R 755 /tmp/etc \
+RUN chmod -R 755 /tmp \
 	&& mv /tmp/* /etc/.
 
 # Build arguments
