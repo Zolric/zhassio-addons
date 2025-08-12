@@ -1,11 +1,8 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.8.3
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:7.2.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-# USER root
-
-# Copy root filesystem
-COPY rootfs /
+USER root
 
 ENV JENKINS_HOME="/config/jenkins" 
 	
@@ -35,10 +32,8 @@ RUN \
 	&& wget -O /usr/share/keyrings/jenkins-keyring.asc \
 	   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key \
 	&& echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
-	   https://pkg.jenkins.io/debian-stable binary/ | tee /etc/apt/sources.list.d/jenkins.list > /dev/null 
-
-RUN \
-	apt-get update \
+	   https://pkg.jenkins.io/debian-stable binary/ | tee /etc/apt/sources.list.d/jenkins.list > /dev/null \
+	&& apt-get update \
 	\
 	&& apt-get install -y \
 	   jenkins \
@@ -49,17 +44,19 @@ RUN \
 	&& arduino-cli config init --additional-urls "https://arduino.esp8266.com/stable/package_esp8266com_index.json,https://espressif.github.io/arduino-esp32/package_esp32_index.json" \
 	&& arduino-cli core update-index \
 	&& arduino-cli core install esp8266:esp8266 \
-	&& arduino-cli core install esp32:esp32 
-RUN    \
-    rm -fr \
+	&& arduino-cli core install esp32:esp32 \
+    \
+    && rm -fr \
         /etc/nginx \
     \
     && mkdir -p /var/log/nginx \
     && touch /var/log/nginx/error.log \
  	&& usermod -aG jenkins www-data
 
-
-
+# Copy root filesystem
+COPY rootfs /
+RUN chmod -R 755 /etc \
+ && chmod -R 755 /usr/share
 
 # Build arguments
 ARG BUILD_ARCH
