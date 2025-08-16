@@ -56,7 +56,7 @@ RUN \
 # Copy root filesystem
 COPY rootfs /
 
-RUN chmod -R 755 /etc
+RUN chmod -R 755 /etc/s6*
 
 # Build arguments
 ARG BUILD_ARCH
