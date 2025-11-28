@@ -1,6 +1,6 @@
 {
     "name": "Zhome NextCloud",
-    "version": "v31.0.10",
+    "version": "v31.0.11",
     "slug": "zhomenextcloud",
     "description": "Self-hosted file share and collaboration platform on the web",
     "webui": "http://[HOST]:[PORT:80]",
