@@ -28,8 +28,6 @@ RUN apk update\
 # Copy data for add-on
 COPY rootfs /
 
-RUN chmod 755 -R /etc
-
 # Build arguments
 ARG BUILD_DATE
 ARG BUILD_REF
