@@ -28,6 +28,8 @@ RUN apk update\
 # Copy data for add-on
 COPY rootfs /
 
+RUN chmod 755 -R /etc/s6-overlay
+
 # Build arguments
 ARG BUILD_DATE
 ARG BUILD_REF
