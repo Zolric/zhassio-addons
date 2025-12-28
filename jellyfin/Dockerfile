@@ -17,11 +17,11 @@ RUN apk update\
 		libva-utils \
 		lshw \
 		nginx \
+		opencl \
+		opencl-icd-loader \
 		jellyfin \
 		ffmpeg \
 		jellyfin-web \
-		opencl \
-		opencl-icd-loader \
 		\
 	&& rm -fr \
 		/etc/nginx \
