@@ -16,3 +16,6 @@ if [ ! -d /config/jellyfin/cache ]; then
 fi
 lshw -C display
 ls -l /dev/dri
+addgroup jellyfin video
+
+#ffmpeg -v verbose -init_hw_device vaapi=va:/dev/dri/renderD128 -init_hw_device opencl@va
