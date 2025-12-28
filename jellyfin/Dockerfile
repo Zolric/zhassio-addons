@@ -14,11 +14,14 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apk update\
 	&& apk add --no-cache \
 		cifs-utils \
+		libva-utils \
 		lshw \
 		nginx \
 		jellyfin \
 		ffmpeg \
 		jellyfin-web \
+		opencl \
+		opencl-icd-loader \
 		\
 	&& rm -fr \
 		/etc/nginx \

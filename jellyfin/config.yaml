@@ -10,8 +10,6 @@ panel_title: Jellyfin
 init: false
 hassio_api: true
 homeassistant_api: true
-host_network: true
-host_dbus: true
 ports: 
   8096/tcp: 8096
   8920/tcp: 8096
@@ -29,7 +27,6 @@ arch:
 privileged: 
   - SYS_ADMIN
   - DAC_READ_SEARCH
-  - NET_ADMIN
 full_access: true
 hassio_role: admin
 map:
@@ -41,6 +38,9 @@ options:
     usbdataback=ext4
 schema:
   disk_s: [str]
+devices:
+  - /dev/dri/card0
+  - /dev/dri/renderD128
 startup: services
 video: true
 udev: true
