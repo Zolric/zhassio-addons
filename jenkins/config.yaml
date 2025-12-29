@@ -7,6 +7,7 @@ ingress: true
 ingress_stream: true
 panel_title: Jenkins
 panel_icon: mdi:alpha-j-circle-outline
+webui: "http://[HOST]:[PORT:8080]"
 init: false
 hassio_api: true
 auth_api: true
