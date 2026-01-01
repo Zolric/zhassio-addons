@@ -40,9 +40,7 @@ schema:
   disk_s: [str]
 startup: services
 video: true
-devices:
-  - /dev/dri/card0
-  - /dev/dri/renderD128
+udev: true
 backup_exclude:
   - "**/jellyfin/cache/**"
   - "**/jellyfin/logs/**"
