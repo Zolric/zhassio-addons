@@ -1,10 +1,10 @@
 {
   "build_from": {
-    "armhf" : "arm32v7/nextcloud:32.0.3",
-    "armv7": "arm32v7/nextcloud:32.0.3",
-    "aarch64": "arm64v8/nextcloud:32.0.3",
-    "amd64" : "amd64/nextcloud:32.0.3",
-    "i386" : "i386/nextcloud:32.0.3"
+    "armhf" : "arm32v7/nextcloud:32.0.5",
+    "armv7": "arm32v7/nextcloud:32.0.5",
+    "aarch64": "arm64v8/nextcloud:32.0.5",
+    "amd64" : "amd64/nextcloud:32.0.5",
+    "i386" : "i386/nextcloud:32.0.5"
   },
   "codenotary": {
     "signer": "zolric@gmail.com"
