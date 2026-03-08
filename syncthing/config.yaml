@@ -1,6 +1,6 @@
 ---
 name: Zhome Syncthing
-version: v3.19
+version: v20.0.1
 slug: zhomesynch
 description: Outil de synchronisation
 ingress: true
