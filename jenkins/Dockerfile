@@ -21,7 +21,7 @@ RUN \
     && apt-get install -y --no-install-recommends \
         nginx \
 		fontconfig \
-		openjdk-17-jre \
+		openjdk-21-jre \
 		curl \
 		wget \
 		git \
@@ -31,7 +31,7 @@ RUN \
 	
 RUN \
 	wget -O /usr/share/keyrings/jenkins-keyring.asc \
-	   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key \
+	   https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key \
 	&& echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 	   https://pkg.jenkins.io/debian-stable binary/ | tee /etc/apt/sources.list.d/jenkins.list > /dev/null 
 RUN \

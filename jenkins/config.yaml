@@ -1,6 +1,6 @@
 ---
 name: Zhome Jenkins
-version: V8.1
+version: Trixie_2026.10
 slug: zhomejenkins
 description: Jenkins
 panel_title: Jenkins
