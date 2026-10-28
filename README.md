@@ -22,17 +22,12 @@ _Nextcloud add-on to Self-hosted file share and collaboration platform on the we
 _video player and streaming server_
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
-![Supports i386 Architecture][i386-shield]
 
 ### [Jenkins add-on](./jenkins)
 _Automate all sorts of tasks related to building, testing, and delivering or deploying software._
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
-![Supports armhf Architecture][armhf-shield]
 ![Supports armv7 Architecture][armv7-shield]
-![Supports i386 Architecture][i386-shield]
 
 ### [Syncthing add-on](./syncthing)
 _Backup some folder to another Syncthing instance._
