@@ -23,7 +23,6 @@ ports_description:
 arch:
   - aarch64
   - amd64
-  - i386
 privileged: 
   - SYS_ADMIN
   - DAC_READ_SEARCH

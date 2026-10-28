@@ -49,8 +49,6 @@ LABEL \
     org.opencontainers.image.title="jellyfin" \
     org.opencontainers.image.description="outil synchro" \
     org.opencontainers.image.authors="Florent" \
-    org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://addons.community" \
     org.opencontainers.image.source="https://github.com/zolric/addons/" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
