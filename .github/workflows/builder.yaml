@@ -4,6 +4,7 @@ env:
   BUILD_ARGS: "--test"
   MONITORED_FILES: "build.yaml config.yaml build.json config.json Dockerfile rootfs"
   ARCHITECTURES: '["aarch64", "amd64"]'
+  IMAGE_NAME: ${{ matrix.addon }}
 
 on:
   push:
@@ -51,7 +52,7 @@ jobs:
         with:
           arch: ${{ matrix.arch }}
           container-registry-password: ${{ secrets.GITHUB_TOKEN }}
-          image: ${{ matrix.image-name }}
+          image: ${{ matrix.image }}
           image-tags: |
             ${{ github.event.release.tag_name }}
             latest
