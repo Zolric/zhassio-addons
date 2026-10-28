@@ -41,6 +41,7 @@ schema:
 startup: services
 video: true
 udev: true
+image: ghcr.io/zolric/zjellyfin-{arch}
 backup_exclude:
   - "**/jellyfin/cache/**"
   - "**/jellyfin/logs/**"

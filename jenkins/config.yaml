@@ -10,6 +10,7 @@ init: false
 hassio_api: true
 auth_api: true
 homeassistant_api: true
+image: ghcr.io/zolric/zhomejenkins-{arch}
 arch:
   - aarch64
   - amd64
