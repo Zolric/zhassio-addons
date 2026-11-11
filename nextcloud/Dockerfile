@@ -41,7 +41,7 @@ LABEL \
     org.label-schema.description="Nextcloud add-on by Zolric" \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="Nextcloud" \
-    org.label-schema.schema-version="1.0.0" \
+    org.label-schema.schema-version="35.0.2" \
     org.label-schema.url="https://github.com/Zolric/hassio-addons/nextcloud" \
     org.label-schema.usage="https://github.com/Zolric/hassio-addons/tree/main/nextcloud/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \

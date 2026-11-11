@@ -1,6 +1,6 @@
 ---
 name: Zhome Jellyfin
-version: v2026.10.b
+version: v2026.11
 slug: zjellyfin
 description: Streaming video
 ingress: true
